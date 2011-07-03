@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+1.111840  2011-07-03 14:36:35 Europe/Vienna
     - Added support for options (thanks magnificent-tears)
 
 1.101420  2010-05-22 18:10:41 Europe/Vienna
