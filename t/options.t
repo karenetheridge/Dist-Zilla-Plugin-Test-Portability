@@ -27,7 +27,7 @@ foreach my $test ( @tests ) {
   like($t->content, $qr, 'options merged successfully');
 }
 
-sub port_test_plug { 
+sub port_test_plug {
          # class           => name             => {}
   return [PortabilityTests => PortabilityTests => @_];
 }

@@ -66,6 +66,10 @@ Specify C<< name = value >> separated by commas.
 
 See L<Test::Portability::Files/options> for possible options.
 
+=method munge_file
+
+Inserts the given options into the generated test file.
+
 =cut
 
 __DATA__
