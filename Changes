@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+    - Renamed to Dist::Zilla::Plugin::Test::Portability
 
 1.111840  2011-07-03 14:36:35 Europe/Vienna
     - Added support for options (thanks magnificent-tears)

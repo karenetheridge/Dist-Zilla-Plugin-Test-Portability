@@ -1,1 +1,3 @@
 Dist-Zilla-Plugin-PortabilityTests-*
+.build
+Dist-Zilla-Plugin-Test-Portability-*
