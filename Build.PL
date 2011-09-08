@@ -28,7 +28,7 @@ my %module_build_args = (
     "Mike Doherty <doherty\@cpan.org>"
   ],
   "dist_name" => "Dist-Zilla-Plugin-Test-Portability",
-  "dist_version" => "v2.0.0",
+  "dist_version" => "2.0.1",
   "license" => "perl",
   "module_name" => "Dist::Zilla::Plugin::Test::Portability",
   "recommends" => {},
