@@ -13,7 +13,7 @@ with 'Dist::Zilla::Role::FileMunger';
 
 In C<dist.ini>:
 
-    [PortabilityTests]
+    [Test::Portability]
     ; you can optionally specify test options
     options = test_dos_length = 1, use_file_find = 0
 
