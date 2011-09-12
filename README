@@ -2,12 +2,12 @@ NAME
     Dist::Zilla::Plugin::Test::Portability - Release tests for portability
 
 VERSION
-    version 2.0.1
+    version 2.0.2
 
 SYNOPSIS
     In "dist.ini":
 
-        [PortabilityTests]
+        [Test::Portability]
         ; you can optionally specify test options
         options = test_dos_length = 1, use_file_find = 0
 
