@@ -1,0 +1,62 @@
+# NAME
+
+Dist::Zilla::Plugin::Test::Portability - Release tests for portability
+
+# VERSION
+
+version 2.000003
+
+# SYNOPSIS
+
+In `dist.ini`:
+
+    [Test::Portability]
+    ; you can optionally specify test options
+    options = test_dos_length = 1, use_file_find = 0
+
+# DESCRIPTION
+
+This is an extension of [Dist::Zilla::Plugin::InlineFiles](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::InlineFiles), providing the
+following file:
+
+    xt/release/portability.t - a standard Test::Portability::Files test
+
+You can set options for the tests in the 'options' attribute:
+Specify `name = value` separated by commas.
+
+See ["options" in Test::Portability::Files](http://search.cpan.org/perldoc?Test::Portability::Files#options) for possible options.
+
+## munge\_file
+
+Inserts the given options into the generated test file.
+
+# AVAILABILITY
+
+The project homepage is [http://metacpan.org/release/Dist-Zilla-Plugin-Test-Portability/](http://metacpan.org/release/Dist-Zilla-Plugin-Test-Portability/).
+
+The latest version of this module is available from the Comprehensive Perl
+Archive Network (CPAN). Visit [http://www.perl.com/CPAN/](http://www.perl.com/CPAN/) to find a CPAN
+site near you, or see [https://metacpan.org/module/Dist::Zilla::Plugin::Test::Portability/](https://metacpan.org/module/Dist::Zilla::Plugin::Test::Portability/).
+
+# SOURCE
+
+The development version is on github at [http://github.com/doherty/Dist-Zilla-Plugin-Test-Portability](http://github.com/doherty/Dist-Zilla-Plugin-Test-Portability)
+and may be cloned from [git://github.com/doherty/Dist-Zilla-Plugin-Test-Portability.git](git://github.com/doherty/Dist-Zilla-Plugin-Test-Portability.git)
+
+# BUGS AND LIMITATIONS
+
+You can make new bug reports, and view existing ones, through the
+web interface at [https://github.com/doherty/Dist-Zilla-Plugin-Test-Portability/issues](https://github.com/doherty/Dist-Zilla-Plugin-Test-Portability/issues).
+
+# AUTHORS
+
+- Marcel Gruenauer <marcel@cpan.org>
+- Randy Stauner <rwstauner@cpan.org>
+- Mike Doherty <doherty@cpan.org>
+
+# COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Mike Doherty.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

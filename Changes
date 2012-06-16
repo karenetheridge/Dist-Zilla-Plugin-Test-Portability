@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+    - Use a decimal version number
 
 2.0.2     2011-09-12
     - Update SYNOPSIS
