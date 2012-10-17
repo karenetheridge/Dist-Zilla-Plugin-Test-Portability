@@ -77,6 +77,9 @@ __DATA__
 ___[ xt/release/portability.t ]___
 #!perl
 
+use strict;
+use warnings;
+
 use Test::More;
 
 eval 'use Test::Portability::Files';
