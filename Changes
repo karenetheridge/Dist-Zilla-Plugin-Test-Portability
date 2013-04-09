@@ -1,6 +1,7 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+    - Test only for our deprecation warnings
 
 2.000003  2012-06-16
     - Use a decimal version number
