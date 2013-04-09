@@ -2,7 +2,7 @@ NAME
     Dist::Zilla::Plugin::Test::Portability - Release tests for portability
 
 VERSION
-    version 2.000003
+    version 2.000004
 
 SYNOPSIS
     In "dist.ini":
