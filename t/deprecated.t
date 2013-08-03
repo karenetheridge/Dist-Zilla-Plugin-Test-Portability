@@ -23,10 +23,6 @@ stderr_like(
 );
 
 $tzil->build;
-END { # Remove (empty) dir created by building the dists
-    require File::Path;
-    File::Path::rmtree('tmp');
-}
 
 my @xtests = map $_->name =~ m{^xt/} ? $_->name : (), $tzil->files->flatten;
 ok(

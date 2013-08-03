@@ -1,32 +1,33 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+  - Don't shoot ourselves in the foot in the tests [kentnl; GH #3]
 
 2.000004  2013-04-09
-    - Test only for our deprecation warnings
+  - Test only for our deprecation warnings
 
 2.000003  2012-06-16
-    - Use a decimal version number
+  - Use a decimal version number
 
 2.0.2     2011-09-12
-    - Update SYNOPSIS
+  - Update SYNOPSIS
 
 2.0.1     2011-09-07
-    - Packaging updates
+  - Packaging updates
 
 v2.0.0    2011-09-07
-    - Renamed to Dist::Zilla::Plugin::Test::Portability
+  - Renamed to Dist::Zilla::Plugin::Test::Portability
 
 1.111840  2011-07-03 14:36:35 Europe/Vienna
-    - Added support for options (thanks magnificent-tears)
+  - Added support for options (thanks magnificent-tears)
 
 1.101420  2010-05-22 18:10:41 Europe/Vienna
-    - removed weaver.ini since that's handled in Dist::Zilla's [@MARCEL] now
-    - list Test::Portability::Files in dist.ini so we don't use() it anymore
+  - removed weaver.ini since that's handled in Dist::Zilla's [@MARCEL] now
+  - list Test::Portability::Files in dist.ini so we don't use() it anymore
 
 1.100700  2010-03-11 17:40:30 Europe/Vienna
-    - fixing error message in generated file
-    - shortcut synopsis tests
+  - fixing error message in generated file
+  - shortcut synopsis tests
 
 1.100690  2010-03-10 23:56:29 Europe/Vienna
-    - original version
+  - original version

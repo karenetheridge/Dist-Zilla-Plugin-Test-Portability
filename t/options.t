@@ -42,8 +42,3 @@ sub new_dzil {
         }
     );
 }
-
-END { # Remove (empty) dir created by building the dists
-    require File::Path;
-    File::Path::rmtree('tmp');
-}
