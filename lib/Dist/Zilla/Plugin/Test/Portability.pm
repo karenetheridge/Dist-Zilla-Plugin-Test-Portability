@@ -6,8 +6,13 @@ package Dist::Zilla::Plugin::Test::Portability;
 # ABSTRACT: Release tests for portability
 # VERSION
 use Moose;
-extends 'Dist::Zilla::Plugin::InlineFiles';
-with 'Dist::Zilla::Role::FileMunger';
+with qw/
+    Dist::Zilla::Role::FileGatherer
+    Dist::Zilla::Role::FileInjector
+    Dist::Zilla::Role::TextTemplate
+/;
+use Dist::Zilla::File::InMemory;
+use Data::Section -setup;
 
 =head1 SYNOPSIS
 
@@ -49,23 +54,28 @@ Inserts the given options into the generated test file.
 
 =cut
 
-sub munge_file {
-    my ($self, $file) = @_;
-    return unless $file->name eq 'xt/release/portability.t';
+sub gather_files {
+    my $self = shift;
 
     # 'name => val, name=val'
     my %options = split(/\W+/, $self->options);
 
-    if ( keys %options ) {
-        my $content = $file->content;
-
-        my $optstr = join ', ', map { "$_ => $options{$_}" } sort keys %options;
-
-        # insert options() above run_tests;
-        $content =~ s/^(run_tests\(\);)$/options($optstr);\n$1/m;
-
-        $file->content($content);
+    my $opts = '';
+    if (%options) {
+        $opts = join ', ', map { "$_ => $options{$_}" } sort keys %options;
+        $opts = "options($opts);";
     }
+
+    my $filename = 'xt/release/portability.t';
+    my $content  = $self->section_data($filename);
+    my $filled_content = $self->fill_in_string( $$content, { opts => $opts } );
+    $self->add_file(
+        Dist::Zilla::File::InMemory->new({
+            name => $filename,
+            content => $filled_content,
+        })
+    );
+
     return;
 }
 
@@ -85,4 +95,5 @@ use Test::More;
 eval 'use Test::Portability::Files';
 plan skip_all => 'Test::Portability::Files required for testing portability'
     if $@;
+{{$opts}}
 run_tests();
