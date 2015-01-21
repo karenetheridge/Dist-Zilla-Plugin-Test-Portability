@@ -2,6 +2,7 @@ Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
   - Add the file in one shot, rather than adding then munging
+  - Remove dependency on Moose::Autobox for tests [kentnl; GH #4]
 
 2.000005  2013-08-03
   - Don't shoot ourselves in the foot in the tests [kentnl; GH #3]
