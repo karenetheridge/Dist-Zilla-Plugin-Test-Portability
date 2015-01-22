@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+2.000006  2015-01-22
   - Add the file in one shot, rather than adding then munging
   - Remove dependency on Moose::Autobox for tests [kentnl; GH #4]
 
