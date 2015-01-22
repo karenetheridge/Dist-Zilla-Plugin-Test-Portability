@@ -52,6 +52,8 @@ has options => (
 
 Inserts the given options into the generated test file.
 
+=for Pod::Coverage gather_files
+
 =cut
 
 sub gather_files {
