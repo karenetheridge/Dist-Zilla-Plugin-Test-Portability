@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::Test::Portability;
-# ABSTRACT: Release tests for portability
+# ABSTRACT: Author tests for portability
 # VERSION
 use Moose;
 with qw/
@@ -33,7 +33,7 @@ __END__
 This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
 following file:
 
-  xt/release/portability.t - a standard Test::Portability::Files test
+  xt/author/portability.t - a standard Test::Portability::Files test
 
 You can set options for the tests in the 'options' attribute:
 Specify C<< name = value >> separated by commas.
@@ -68,7 +68,7 @@ sub gather_files {
         $opts = "options($opts);";
     }
 
-    my $filename = 'xt/release/portability.t';
+    my $filename = 'xt/author/portability.t';
     my $content  = $self->section_data($filename);
     my $filled_content = $self->fill_in_string( $$content, { opts => $opts } );
     $self->add_file(
@@ -86,7 +86,7 @@ no Moose;
 1;
 
 __DATA__
-___[ xt/release/portability.t ]___
+___[ xt/author/portability.t ]___
 #!perl
 
 use strict;
