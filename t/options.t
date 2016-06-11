@@ -23,7 +23,7 @@ foreach my $test ( @tests ) {
     my $dzil = new_dzil(port_test_plug($opts));
     $dzil->build;
 
-    my $t = (grep { $_->name eq 'xt/release/portability.t' } @{ $dzil->files })[0];
+    my $t = (grep { $_->name eq 'xt/author/portability.t' } @{ $dzil->files })[0];
     like($t->content, $qr, 'options merged successfully');
 }
 
