@@ -15,6 +15,12 @@ with qw/
 use Dist::Zilla::File::InMemory;
 use Data::Section -setup;
 
+=begin :prelude
+
+=for test_synopsis BEGIN { die "SKIP: synopsis isn't perl code" }
+
+=end :prelude
+
 =head1 SYNOPSIS
 
 In C<dist.ini>:
@@ -22,10 +28,6 @@ In C<dist.ini>:
     [Test::Portability]
     ; you can optionally specify test options
     options = test_dos_length = 1, use_file_find = 0
-
-=for test_synopsis
-1;
-__END__
 
 =cut
 
