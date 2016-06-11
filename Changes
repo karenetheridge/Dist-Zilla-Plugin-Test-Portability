@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+  - Add Test::Portability::Files as a develop phase prereq on distros which
+    use this plugin. GH #5 (Dave Rolsky)
 
 2.000006  2015-01-22
   - Add the file in one shot, rather than adding then munging

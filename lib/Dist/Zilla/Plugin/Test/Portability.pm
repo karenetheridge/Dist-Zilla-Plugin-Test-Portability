@@ -9,6 +9,7 @@ use Moose;
 with qw/
     Dist::Zilla::Role::FileGatherer
     Dist::Zilla::Role::FileInjector
+    Dist::Zilla::Role::PrereqSource
     Dist::Zilla::Role::TextTemplate
 /;
 use Dist::Zilla::File::InMemory;
@@ -47,6 +48,23 @@ has options => (
   isa     => 'Str',
   default => '',
 );
+
+=for Pod::Coverage register_prereqs
+
+=cut
+
+sub register_prereqs {
+    my ($self) = @_;
+
+    $self->zilla->register_prereqs({
+            type  => 'requires',
+            phase => 'develop',
+        },
+        'Test::Portability::Files' => '0',
+    );
+
+    return;
+}
 
 =head2 munge_file
 
