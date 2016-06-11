@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+
+2.000007  2016-06-11
   - Add Test::Portability::Files as a develop phase prereq on distros which
     use this plugin. GH #5 (Dave Rolsky)
   - make this test an author rather than release test -- it is a test you want
