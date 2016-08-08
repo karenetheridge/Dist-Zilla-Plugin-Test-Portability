@@ -4,7 +4,9 @@ use warnings;
 
 package Dist::Zilla::Plugin::Test::Portability;
 # ABSTRACT: Author tests for portability
-# VERSION
+
+our $VERSION = '2.001000';
+
 use Moose;
 with qw/
     Dist::Zilla::Role::FileGatherer

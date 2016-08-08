@@ -1,3 +1,8 @@
-Dist-Zilla-Plugin-PortabilityTests-*
-.build
-Dist-Zilla-Plugin-Test-Portability-*
+/.ackrc
+/.build/
+!/.gitignore
+/.latest
+Dist-Zilla-Plugin-PortabilityTests-*/
+Dist-Zilla-Plugin-PortabilityTests-*.tar.gz
+Dist-Zilla-Plugin-Test-Portability-*/
+Dist-Zilla-Plugin-Test-Portability-*.tar.gz
