@@ -108,8 +108,6 @@ no Moose;
 
 __DATA__
 ___[ xt/author/portability.t ]___
-#!perl
-
 use strict;
 use warnings;
 
