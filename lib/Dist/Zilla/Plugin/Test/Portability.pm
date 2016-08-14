@@ -61,8 +61,10 @@ sub gather_files {
     }
 
     my $filename = 'xt/author/portability.t';
-    my $content  = $self->section_data($filename);
-    my $filled_content = $self->fill_in_string( $$content, { opts => $opts } );
+    my $filled_content = $self->fill_in_string(
+        ${ $self->section_data($filename) },
+        { opts => $opts },
+    );
     $self->add_file(
         Dist::Zilla::File::InMemory->new({
             name => $filename,
