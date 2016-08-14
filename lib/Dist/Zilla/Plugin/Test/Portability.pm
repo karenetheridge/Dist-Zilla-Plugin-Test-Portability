@@ -26,8 +26,8 @@ sub register_prereqs {
     my ($self) = @_;
 
     $self->zilla->register_prereqs({
-            type  => 'requires',
             phase => 'develop',
+            type  => 'requires',
         },
         'Test::Portability::Files' => '0',
     );
