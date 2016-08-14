@@ -3,7 +3,9 @@ use warnings;
 
 package Dist::Zilla::Plugin::PortabilityTests;
 # ABSTRACT: (DEPRECATED) Release tests for portability
-# VERSION
+
+our $VERSION = '2.001000';
+
 use Moose;
 extends 'Dist::Zilla::Plugin::Test::Portability';
 
