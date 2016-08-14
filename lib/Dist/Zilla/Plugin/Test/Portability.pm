@@ -29,6 +29,7 @@ sub register_prereqs {
             phase => 'develop',
             type  => 'requires',
         },
+        'Test::More' => 0,
         'Test::Portability::Files' => '0',
     );
 
