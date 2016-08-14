@@ -10,7 +10,9 @@ use Moose;
 extends 'Dist::Zilla::Plugin::Test::Portability';
 
 before register_component => sub {
-    warn '!!! [PortabilityTests] is deprecated and will be removed in a future release; please use [Test::Portability].';
+    warnings::warnif('deprecated',
+        "!!! [PortabilityTests] is deprecated and will be removed in a future release; please use [Test::Portability].\n",
+    );
 };
 
 =head1 SYNOPSIS

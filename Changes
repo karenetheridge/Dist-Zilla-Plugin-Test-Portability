@@ -1,6 +1,8 @@
 Revision history for Perl extension {{$dist->name}}
 
 {{$NEXT}}
+  - use the 'deprecated' warning category to issue the warning in
+    [PortabilityTests]
 
 2.000007  2016-06-11
   - Add Test::Portability::Files as a develop phase prereq on distros which
