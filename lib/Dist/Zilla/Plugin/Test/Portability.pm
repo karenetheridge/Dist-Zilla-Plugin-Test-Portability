@@ -16,45 +16,11 @@ with qw/
 use Dist::Zilla::File::InMemory;
 use Data::Section -setup;
 
-=begin :prelude
-
-=for test_synopsis BEGIN { die "SKIP: synopsis isn't perl code" }
-
-=end :prelude
-
-=head1 SYNOPSIS
-
-In C<dist.ini>:
-
-    [Test::Portability]
-    ; you can optionally specify test options
-    options = test_dos_length = 1, use_file_find = 0
-
-=cut
-
-=head1 DESCRIPTION
-
-This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
-following file:
-
-  xt/author/portability.t - a standard Test::Portability::Files test
-
-You can set options for the tests in the 'options' attribute:
-Specify C<< name = value >> separated by commas.
-
-See L<Test::Portability::Files/options> for possible options.
-
-=cut
-
 has options => (
   is      => 'ro',
   isa     => 'Str',
   default => '',
 );
-
-=for Pod::Coverage register_prereqs
-
-=cut
 
 sub register_prereqs {
     my ($self) = @_;
@@ -68,14 +34,6 @@ sub register_prereqs {
 
     return;
 }
-
-=head2 munge_file
-
-Inserts the given options into the generated test file.
-
-=for Pod::Coverage gather_files
-
-=cut
 
 sub gather_files {
     my $self = shift;
@@ -105,6 +63,50 @@ sub gather_files {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+
+=pod
+
+=begin :prelude
+
+=for test_synopsis BEGIN { die "SKIP: synopsis isn't perl code" }
+
+=end :prelude
+
+=head1 SYNOPSIS
+
+In your F<dist.ini>:
+
+    [Test::Portability]
+    ; you can optionally specify test options
+    options = test_dos_length = 1, use_file_find = 0
+
+=cut
+
+=head1 DESCRIPTION
+
+This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
+following file:
+
+  xt/author/portability.t - a standard Test::Portability::Files test
+
+You can set options for the tests in the 'options' attribute:
+Specify C<< name = value >> separated by commas.
+
+See L<Test::Portability::Files/options> for possible options.
+
+=cut
+
+=for Pod::Coverage register_prereqs
+
+=cut
+
+=head2 munge_file
+
+Inserts the given options into the generated test file.
+
+=for Pod::Coverage gather_files
+
+=cut
 
 __DATA__
 ___[ xt/author/portability.t ]___
