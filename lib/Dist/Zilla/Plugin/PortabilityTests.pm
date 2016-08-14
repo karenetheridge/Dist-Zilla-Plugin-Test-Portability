@@ -17,9 +17,7 @@ before register_component => sub {
 
 =head1 SYNOPSIS
 
-Please use L<Dist::Zilla::Plugin::Test::Portability> instead.
-
-In C<dist.ini>:
+In your F<dist.ini>:
 
     [Test::Portability]
 
@@ -29,6 +27,10 @@ In C<dist.ini>:
 
 =end :prelude
 
-=cut
+=head1 DESCRIPTION
 
-1;
+THIS MODULE IS DEPRECATED. Please use
+L<Dist::Zilla::Plugin::Test::Portability> instead. It may be removed at a
+later time (but not before February 2017).
+
+=cut
