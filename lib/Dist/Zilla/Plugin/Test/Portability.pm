@@ -22,6 +22,18 @@ has options => (
   default => '',
 );
 
+around dump_config => sub
+{
+    my ($orig, $self) = @_;
+    my $config = $self->$orig;
+
+    $config->{+__PACKAGE__} = {
+        options => $self->options,
+        blessed($self) ne __PACKAGE__ ? ( version => $VERSION ) : (),
+    };
+    return $config;
+};
+
 sub register_prereqs {
     my ($self) = @_;
 

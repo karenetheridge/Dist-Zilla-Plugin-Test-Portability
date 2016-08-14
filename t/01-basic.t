@@ -15,6 +15,7 @@ my $tzil = Builder->from_config(
             path(qw(source dist.ini)) => simple_ini(
                 [ GatherDir => ],
                 [ Manifest => ],
+                [ MetaConfig => ],
                 [ 'Test::Portability' ],
             ),
             path(qw(source lib Foo.pm)) => <<'MODULE',
@@ -49,6 +50,20 @@ cmp_deeply(
                 },
             },
         },
+        x_Dist_Zilla => superhashof({
+            plugins => supersetof(
+                {
+                    class => 'Dist::Zilla::Plugin::Test::Portability',
+                    config => {
+                        'Dist::Zilla::Plugin::Test::Portability' => {
+                            options => '',
+                        },
+                    },
+                    name => 'Test::Portability',
+                    version => Dist::Zilla::Plugin::Test::Portability->VERSION,
+                },
+            ),
+        }),
     }),
     'prereqs are properly injected for the develop phase',
 ) or diag 'got distmeta: ', explain $tzil->distmeta;
