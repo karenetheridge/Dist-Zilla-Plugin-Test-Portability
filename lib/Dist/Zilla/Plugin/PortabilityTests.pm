@@ -15,6 +15,11 @@ before register_component => sub {
     );
 };
 
+__PACKAGE__->meta->make_immutable;
+__END__
+
+=pod
+
 =head1 SYNOPSIS
 
 In your F<dist.ini>:
