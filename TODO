@@ -1,0 +1,10 @@
+
+- remove the use of eval in the generated test (it is already in develop prereqs)
+    -> release this one as a trial.
+
+- accept individual options via their own attributes
+
+- stop having Test::Portability::Files do its own plan
+
+- accept filefinders, and start listing filenames out explicitly
+    just like EOL, NoTabs
