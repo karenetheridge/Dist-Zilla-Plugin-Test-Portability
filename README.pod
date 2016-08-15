@@ -1,0 +1,113 @@
+=pod
+
+=encoding UTF-8
+
+=head1 NAME
+
+Dist::Zilla::Plugin::Test::Portability - Author tests for portability
+
+=head1 VERSION
+
+version 2.001000
+
+=for test_synopsis BEGIN { die "SKIP: synopsis isn't perl code" }
+
+=head1 SYNOPSIS
+
+In your F<dist.ini>:
+
+    [Test::Portability]
+    ; you can optionally specify test options
+    options = test_dos_length = 1, use_file_find = 0
+
+=head1 DESCRIPTION
+
+This is an extension of L<Dist::Zilla::Plugin::InlineFiles>, providing the
+following file:
+
+  xt/author/portability.t - a standard Test::Portability::Files test
+
+You can set options for the tests in the 'options' attribute:
+Specify C<< name = value >> separated by commas.
+
+See L<Test::Portability::Files/options> for possible options.
+
+=for Pod::Coverage register_prereqs
+
+=head2 munge_file
+
+Inserts the given options into the generated test file.
+
+=for Pod::Coverage gather_files
+
+=head1 SUPPORT
+
+Bugs may be submitted through L<the RT bug tracker|https://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-Test-Portability>
+(or L<bug-Dist-Zilla-Plugin-Test-Portability@rt.cpan.org|mailto:bug-Dist-Zilla-Plugin-Test-Portability@rt.cpan.org>).
+
+=head1 AUTHORS
+
+=over 4
+
+=item *
+
+Marcel Gruenauer <marcel@cpan.org>
+
+=item *
+
+Randy Stauner <rwstauner@cpan.org>
+
+=item *
+
+Mike Doherty <doherty@cpan.org>
+
+=back
+
+=head1 CONTRIBUTORS
+
+=for stopwords Karen Etheridge Marcel Gruenauer Mike Doherty Randy Stauner Kent Fredric Peter Vereshagin Dave Rolsky
+
+=over 4
+
+=item *
+
+Karen Etheridge <ether@cpan.org>
+
+=item *
+
+Marcel Gruenauer <hanekomu@gmail.com>
+
+=item *
+
+Mike Doherty <doherty@cs.dal.ca>
+
+=item *
+
+Mike Doherty <mike@mikedoherty.ca>
+
+=item *
+
+Randy Stauner <randy@magnificent-tears.com>
+
+=item *
+
+Kent Fredric <kentfredric@gmail.com>
+
+=item *
+
+Peter Vereshagin <peter@vereshagin.org>
+
+=item *
+
+Dave Rolsky <autarch@urth.org>
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Karen Etheridge.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut

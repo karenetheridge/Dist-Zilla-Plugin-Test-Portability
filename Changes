@@ -1,6 +1,6 @@
-Revision history for Perl extension {{$dist->name}}
+Revision history for Perl extension Dist-Zilla-Plugin-Test-Portability
 
-{{$NEXT}}
+2.001000  2016-08-15 03:24:06Z
   - use the 'deprecated' warning category to issue the warning in
     [PortabilityTests]
 
