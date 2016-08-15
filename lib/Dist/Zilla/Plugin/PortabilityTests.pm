@@ -11,7 +11,7 @@ extends 'Dist::Zilla::Plugin::Test::Portability';
 
 before register_component => sub {
     warnings::warnif('deprecated',
-        "!!! [PortabilityTests] is deprecated and will be removed in a future release; please use [Test::Portability].\n",
+        "!!! [PortabilityTests] is deprecated and will be removed in a future release; replace it with [Test::Portability].\n",
     );
 };
 
