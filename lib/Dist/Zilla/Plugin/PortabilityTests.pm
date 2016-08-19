@@ -7,6 +7,8 @@ package Dist::Zilla::Plugin::PortabilityTests;
 our $VERSION = '2.001001';
 
 use Moose;
+use namespace::autoclean;
+
 extends 'Dist::Zilla::Plugin::Test::Portability';
 
 before register_component => sub {
