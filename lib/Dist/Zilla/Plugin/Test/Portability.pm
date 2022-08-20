@@ -58,7 +58,7 @@ sub gather_files {
 
     my $opts = '';
     if (%options) {
-        $opts = join ', ', map { "$_ => $options{$_}" } sort keys %options;
+        $opts = join ', ', map "$_ => $options{$_}", sort keys %options;
         $opts = "options($opts);";
     }
 
