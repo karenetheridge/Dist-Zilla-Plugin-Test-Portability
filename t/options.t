@@ -9,8 +9,8 @@ my $config = simple_ini();
 my $end = 'run_tests\(\);';
 
 my @tests = (
-    [ {             }, qr/  if \$@;\n+$end$/m ],
-    [ {options => ''}, qr/  if \$@;\n+$end$/m ],
+    [ {             }, qr/use Test::Portability::Files;\n+$end$/m ],
+    [ {options => ''}, qr/use Test::Portability::Files;\n+$end$/m ],
     [ {options => 'test_case => 0'}, qr/\n\Qoptions(test_case => 0);\E\n$end$/m ],
     [ {options => 'test_space=0,test_dos_length=1'}, qr/\n\Qoptions(test_dos_length => 1, test_space => 0);\E\n$end/m ],
 );
