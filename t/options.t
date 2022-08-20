@@ -3,6 +3,7 @@ use warnings;
 use Test::More;
 
 use Test::DZil;
+use List::Util 'first';
 
 my $config = simple_ini();
 
@@ -23,7 +24,7 @@ foreach my $test ( @tests ) {
     my $dzil = new_dzil(port_test_plug($opts));
     $dzil->build;
 
-    my $t = (grep { $_->name eq 'xt/author/portability.t' } @{ $dzil->files })[0];
+    my $t = first { $_->name eq 'xt/author/portability.t' } @{ $dzil->files };
     like($t->content, $qr, 'options merged successfully');
 }
 
