@@ -8,7 +8,7 @@ Dist::Zilla::Plugin::Test::Portability - Author tests for portability
 
 =head1 VERSION
 
-version 2.001002
+version 2.001003
 
 =for test_synopsis BEGIN { die "SKIP: synopsis isn't perl code" }
 
