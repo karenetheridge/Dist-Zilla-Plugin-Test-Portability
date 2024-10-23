@@ -1,6 +1,7 @@
 Revision history for Dist-Zilla-Plugin-Test-Portability
 
 {{$NEXT}}
+  - fixed test dependency on Test::Portability::Files
 
 2.001002  2024-10-20 18:24:51Z
   - removed direct dependency on Test::Portability::Files
