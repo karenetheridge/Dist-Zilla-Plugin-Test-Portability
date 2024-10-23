@@ -4,7 +4,7 @@ use warnings;
 package Dist::Zilla::Plugin::PortabilityTests;
 # ABSTRACT: (DEPRECATED) Release tests for portability
 
-our $VERSION = '2.001003';
+our $VERSION = '2.001004';
 
 use Moose;
 use namespace::autoclean;
